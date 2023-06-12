@@ -1,0 +1,27 @@
+#include "iter.hpp"
+#include <iostream>
+#include <string>
+
+void print_number(int num) {
+	std::cout << num << ' ';
+}
+
+void print_string(std::string str) {
+	std::cout << str << std::endl;
+}
+
+int main() {
+	int nums[10] = { 1, 2, 3, 4, 5, 6, 9, 40, -1, 0 };
+
+	iter(nums, 10, print_number);
+	std::cout << std::endl;
+
+	std::cout << std::endl;
+	std::string strs[3] = {
+		"Hello world",
+		"Hello moon",
+		"Goodnight world"
+	};
+
+	iter(strs, 3, print_string);
+}
